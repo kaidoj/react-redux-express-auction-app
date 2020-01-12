@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+
+  webserver:
+    build: ./frontend/build
+    ports:
+      - "80:80"
+  api:
+    ports:
+      - "3002:3002"
+    command: npm run production
+  mongo-express:
+    ports:
+      - 8081:8081

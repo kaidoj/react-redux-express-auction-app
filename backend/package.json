@@ -1,0 +1,58 @@
+{
+  "name": "express-rest-api-boilerplate",
+  "version": "0.0.0",
+  "author": "Lukas Aichbauer <l.aichbauer@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aichbauer/express-rest-api-boilerplate.git"
+  },
+  "homepage": "https://github.com/aichbauer/express-rest-api-boilerplate#readme",
+  "bugs": {
+    "url": "https://github.com/aichbauer/express-rest-api-boilerplate/issues"
+  },
+  "scripts": {
+    "start": "npm run nodemon",
+    "dev": "cross-env NODE_ENV=development node ./api/api.js",
+    "nodemon": "nodemon --exec npm run dev",
+    "lint": "eslint ./api/. ./config/. ./test/.",
+    "production": "cross-env NODE_ENV=production node ./api/api.js",
+    "test": "cross-env NODE_ENV=testing jest --coverage",
+    "test-ci": "jest --coverage --forceExit"
+  },
+  "jest": {
+    "globals": {
+      "__DEV__": true
+    },
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "axios-cache-adapter": "^2.1.1",
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.5",
+    "express": "^4.16.3",
+    "express-routes-mapper": "^1.0.2",
+    "helmet": "^3.12.0",
+    "jsonwebtoken": "^8.2.1",
+    "moment": "^2.22.2",
+    "mongoose": "^5.3.14",
+    "slug": "^0.9.2",
+    "validator": "^10.9.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.4",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "nodemon": "^1.17.3",
+    "shx": "^0.2.2",
+    "supertest": "^3.0.0"
+  }
+}

@@ -1,0 +1,4 @@
+export const BIDS_REQUESTED = 'BIDS_REQUESTED'
+export const BIDS_RECEIVED = 'BIDS_RECEIVED'
+export const BIDS_FAILED ='BIDS_FAILED'
+export const BID_ADDED ='BID_ADDED' 
